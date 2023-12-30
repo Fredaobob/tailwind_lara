@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
 </head>
-<body class="bg-yellow-200 min-h-screen flex flex-col items-center justify-center">
+<body class="bg-gradient-to-t from-blue-300 via-yellow-300 to-orange-300 min-h-screen flex flex-col items-center justify-center">
 
-    <div class="text-center">
-      <button id="poemContainer" class="bg-orange-500 text-white py-2 px-4 rounded-md mb-4">
-        Gerar 🍊laranja
-      </button>
-  
-      <!-- Adicione esta div para exibir o poema gerado -->
-      <div id="poemOutput" class="text-left"></div>
+    <div class="text-center mx-auto max-w-md"> <!-- mx-auto para centralizar e max-w-md para limitar a largura em telas grandes -->
+        <button id="poemContainer" class="bg-orange-400 text-white py-2 px-4 rounded-md mb-4">
+            Gerar poema vei besta
+        </button>
+
+        <div id="wordInputContainer" class="mb-4">
+            <input type="text" id="wordInput" placeholder="Digite uma palavra" class="border px-2 py-1 mr-2">
+            <button id="addWordBtn" class="bg-green-500 text-white py-1 px-2 rounded-md">Adicionar Palavra</button>
+        </div>
+
+        <!-- Adicione esta div para exibir o poema gerado -->
+        <div id="poemOutput" class="text-left bg-opacity-40 bg-green-500 ml-3 mr-3 px-3 rounded-xl"></div>
     </div>
 </body>
 </html>

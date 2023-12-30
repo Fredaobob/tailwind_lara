@@ -66,5 +66,23 @@ const listaDePalavras = [
     return lista[indiceAleatorio];
   }
   
+  // ... Seu código existente ...
+
+function adicionarPalavra() {
+  const novaPalavra = document.getElementById("wordInput").value;
+  if (novaPalavra.trim() !== "") {
+      listaDePalavras.push(novaPalavra);
+      document.getElementById("wordInput").value = ""; // Limpa o campo de entrada
+      alert(`Palavra "${novaPalavra}" adicionada com sucesso!`);
+  } else {
+      alert("Por favor, digite uma palavra válida.");
+  }
+}
+
+document.getElementById("addWordBtn").addEventListener("click", adicionarPalavra);
+
+// ... Seu código existente ...
+
+  
   document.getElementById("poemContainer").addEventListener("click", gerarPoema);
   
