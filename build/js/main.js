@@ -89,10 +89,22 @@ document.getElementById("addWordBtn").addEventListener("click", adicionarPalavra
 
   document.addEventListener("DOMContentLoaded", function() {
     var trilhaSonora = document.getElementById("trilhaSonora");
+    var playPauseBtn = document.getElementById("playPauseBtn");
 
     // Define o volume desejado (0.5 neste exemplo)
     trilhaSonora.volume = 0.5;
 
     // Inicia a reprodução automaticamente
     trilhaSonora.play();
+
+    // Adiciona um evento de clique para o botão play/pause
+    playPauseBtn.addEventListener("click", function() {
+        if (trilhaSonora.paused) {
+            trilhaSonora.play();
+            playPauseBtn.innerText = "Pause";
+        } else {
+            trilhaSonora.pause();
+            playPauseBtn.innerText = "Play";
+        }
+    });
 });
