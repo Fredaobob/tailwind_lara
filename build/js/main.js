@@ -86,3 +86,13 @@ document.getElementById("addWordBtn").addEventListener("click", adicionarPalavra
   
   document.getElementById("poemContainer").addEventListener("click", gerarPoema);
   
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var trilhaSonora = document.getElementById("trilhaSonora");
+
+    // Define o volume desejado (0.5 neste exemplo)
+    trilhaSonora.volume = 0.5;
+
+    // Inicia a reprodução automaticamente
+    trilhaSonora.play();
+});
